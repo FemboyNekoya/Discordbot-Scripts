@@ -1,0 +1,20 @@
+{
+  "name": "botinfo",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "SsPaj",
+  "actions": [
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "(async () => {\n    const { version, EmbedBuilder } = require('discord.js');\n    await client.guilds.cache.forEach((g) => g.available && g.members.fetch());\n    const moment = require('moment');\n    require('moment-duration-format');\n    const botuptime = moment.duration(bot.uptime).format('y[ years][,] M[ Months]d[ days][,] h[ hours][,] m[ minutes][, and] s[ seconds]');\n\n    const embed = new DiscordJS.MessageEmbed()\n    .setColor('#2ecc71')\n    .setAuthor({ name: bot.user.username, iconURL: bot.user.displayAvatarURL() })\n    .setThumbnail(bot.user.displayAvatarURL())\n    .addFields([\n      { name: 'Uptime', value: botuptime, inline: true },\n      { name: 'Ping', value: Math.floor(bot.ws.ping).toLocaleString(), inline: true },\n      { name: 'Guilds', value: bot.guilds.cache.size.toLocaleString(), inline: true },\n      { name: 'Discord.js', value: version, inline: true },\n      { name: 'Node', value: process.version, inline: true },\n      { name: 'RAM Usage', value: `${Math.floor((process.memoryUsage().heapUsed / 1024) / 1024).toLocaleString()} MB`, inline: true },\n    ]);\n  return msg.channel.send({ embeds: [embed] });\n    })();",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    }
+  ],
+  "comType": "0",
+  "_aliases": [
+    "bi"
+  ]
+}
