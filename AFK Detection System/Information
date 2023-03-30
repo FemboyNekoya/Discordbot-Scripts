@@ -1,1 +1,10 @@
+This is a Basic AFK Detection System which allowes you to do the following:
 
+- Set afk with reason
+- Automatically remove afk
+- Send a message to user if target is afk along with reason
+
+
+
+                              (IMPORTANT)
+Keep in mind that you will need all 3 provided Scripts to make it Work!
