@@ -1,0 +1,206 @@
+{
+  "name": "User",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "20",
+      "storage": "1",
+      "varName2": "descriminator",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "4",
+      "storage": "1",
+      "varName2": "color",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "15",
+      "storage": "1",
+      "varName2": "status",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "7",
+      "storage": "1",
+      "varName2": "HR",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "14",
+      "storage": "1",
+      "varName2": "game",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "17",
+      "storage": "1",
+      "varName2": "rolelist",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "16",
+      "storage": "1",
+      "varName2": "Av",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "22",
+      "storage": "1",
+      "varName2": "createdatdate",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "user",
+      "info": "24",
+      "storage": "1",
+      "varName2": "joinedatdate",
+      "name": "Store Member Info"
+    },
+    {
+      "sourceDate": "${tempVars(\"createdatdate\")}",
+      "dateLanguage": "",
+      "modeStorage": "0",
+      "info": "12",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "createdat",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "sourceDate": "${tempVars(\"joinedatdate\")}",
+      "dateLanguage": "",
+      "modeStorage": "0",
+      "info": "12",
+      "buildInput": "",
+      "storage": "1",
+      "varName": "joinedat",
+      "name": "Store Date Info Plus"
+    },
+    {
+      "role": "3",
+      "varName": "HR",
+      "info": "3",
+      "storage": "1",
+      "varName2": "rolecolor",
+      "name": "Store Role Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "User Information",
+          "url": "",
+          "color": "${tempVars(\"rolecolor\")}",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "${tempVars(\"Av\")}",
+          "description": "",
+          "fields": [
+            {
+              "name": "Username",
+              "value": "${tempVars(\"username\")}#${tempVars(\"descriminator\")}",
+              "inline": "true"
+            },
+            {
+              "name": "User ID",
+              "value": "${tempVars(\"id\")}",
+              "inline": "true"
+            },
+            {
+              "name": "Status",
+              "value": "${tempVars(\"status\")}",
+              "inline": "true"
+            },
+            {
+              "name": "Created At",
+              "value": "<t:${tempVars(\"createdat\")}>",
+              "inline": "false"
+            },
+            {
+              "name": "Joined At",
+              "value": "<t:${tempVars(\"joinedat\")}>",
+              "inline": "false"
+            },
+            {
+              "name": "Highest Role",
+              "value": "${tempVars(\"HR\")}",
+              "inline": "false"
+            },
+            {
+              "name": "Roles",
+              "value": "${tempVars(\"rolelist\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"Av\")}",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "skhsp",
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "user",
+      "description": "user to obtain information from",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Displays information, such as the date you entered the server and the date you signed up for Discord, about yourself or another user."
+}
