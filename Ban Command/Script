@@ -1,0 +1,156 @@
+{
+  "name": "ban",
+  "permissions": "MANAGE_GUILD",
+  "permissions2": "MANAGE_ROLES",
+  "restriction": "1",
+  "_id": "quQvU",
+  "actions": [
+    {
+      "member": "5",
+      "varName": "User",
+      "info": "1",
+      "storage": "1",
+      "varName2": "banned.id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "5",
+      "varName": "User",
+      "reason": "${slashParams(\"Reason\")}",
+      "days": "${slashParams(\"DeleteMessages\")}",
+      "name": "Ban Member"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "RED",
+          "timestamp": "false",
+          "imageUrl": "https://media3.giphy.com/media/fe4dDMD2cAU5RfEaCU/giphy.gif",
+          "thumbUrl": "",
+          "description": "Banned **${slashParams(\"User\")}** for **${slashParams(\"Reason\")}**. I have also deleted **${slashParams(\"DeleteMessages\")}** of ${slashParams(\"User\")}'s messages!",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "103",
+      "varName": "955037484637618196",
+      "message": "",
+      "buttons": [
+        {
+          "name": "Un ban",
+          "type": "DANGER",
+          "id": "msg-button-0f4a383",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "MULTI",
+          "time": "",
+          "actions": [
+            {
+              "member": "101",
+              "varName": "${tempVars(\"banned.id\")}",
+              "reason": "Unbanned by ${member}",
+              "name": "Unban Member"
+            },
+            {
+              "channel": "0",
+              "varName": "",
+              "message": " Unbanned ${slashParams(\"User\")}",
+              "buttons": [],
+              "selectMenus": [],
+              "attachments": [],
+              "embeds": [],
+              "reply": true,
+              "ephemeral": false,
+              "tts": false,
+              "overwrite": false,
+              "dontSend": false,
+              "editMessage": "0",
+              "editMessageVarName": "",
+              "storage": "0",
+              "varName2": "",
+              "name": "Send Message"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Ban",
+          "url": "",
+          "color": "RED",
+          "timestamp": "false",
+          "imageUrl": "https://media3.giphy.com/media/fe4dDMD2cAU5RfEaCU/giphy.gif",
+          "thumbUrl": "",
+          "description": "${slashParams(\"User\")} was banned by ${member} for ${slashParams(\"Reason\")} and has deleted ${slashParams(\"DeleteMessages\")} of their messages.",
+          "fields": [],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "User",
+      "description": "",
+      "type": "USER",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "Reason",
+      "description": "",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    },
+    {
+      "name": "DeleteMessages",
+      "description": "",
+      "type": "INTEGER",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
