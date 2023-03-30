@@ -1,0 +1,155 @@
+{
+  "name": "kick",
+  "permissions": "KICK_MEMBERS",
+  "restriction": "1",
+  "_id": "ogEmE",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "reason",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "0",
+      "iftrue": "3",
+      "iftrueVal": "6",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "varName2": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "9",
+      "name": "Check If Member"
+    },
+    {
+      "title": "Done!",
+      "author": "",
+      "color": "76c893",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "message": "You have kicked ${tempVars(\"reason\")} \nReason: ${tempVars(\"reason\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "reason": "${tempVars(\"reason\")}",
+      "name": "Kick Member"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Oops...",
+      "author": "",
+      "color": "e63946",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Who do I have to kick?\n\nUse: m!kick @member {reason}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Oops...",
+      "author": "",
+      "color": "e63946",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed3",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed3",
+      "message": "You cannot ban this user because his permissions are equal to or greater than those of the bot!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed3",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "Category": "Moderation",
+      "Description": "Kick a member",
+      "Include": "Yes",
+      "name": "Auto Help"
+    }
+  ]
+}
