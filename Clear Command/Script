@@ -1,0 +1,100 @@
+{
+  "name": "purge",
+  "permissions": "MANAGE_MESSAGES",
+  "permissions2": "MANAGE_MESSAGES",
+  "restriction": "1",
+  "_id": "AeioV",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "role": "101",
+      "varName2": "968054805794795522",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "8"
+      },
+      "name": "Check If Member has Role"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "clear",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "0",
+      "count": "${tempVars(\"clear\")}",
+      "condition": "0",
+      "custom": "",
+      "varName": "nombre",
+      "name": "Delete Bulk Messages"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "<:v_:1039622312300908554> **${tempVars(\"clear\")} messages ont bien été supprimés !**",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "clearmsg",
+      "name": "Send Message"
+    },
+    {
+      "time": "3",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "clearmsg",
+      "reason": "Auto delete ",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Vous n'avez pas les permissions nécessaires !",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "nointeraction": false,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "description": "Supprimer x messages dans le salon où est exécutée la commande",
+  "parameters": [
+    {
+      "name": "nombre",
+      "description": "",
+      "type": "INTEGER",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
