@@ -1,0 +1,58 @@
+{
+  "name": "Dice",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "dice",
+      "min": "1",
+      "max": "6",
+      "name": "Generate Random Number"
+    },
+    {
+      "channel": "0",
+      "varName": "dice.msg",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Dice Rolled",
+          "url": "",
+          "color": "",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "https://www.animatedimages.org/data/media/710/animated-dice-image-0096.gif",
+          "description": "${member.displayName}",
+          "fields": [
+            {
+              "name": "Tossed",
+              "value": "${tempVars(\"dice\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "dicemsgreact",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "yPscP",
+  "comType": "4",
+  "description": "roll a dice"
+}
