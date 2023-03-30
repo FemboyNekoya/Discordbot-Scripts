@@ -1,0 +1,105 @@
+{
+  "name": "Poll",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "Picgi",
+  "actions": [
+    {
+      "info": "0",
+      "find": "902234112503451675",
+      "storage": "1",
+      "varName": "cloverkingdomteam",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "3",
+      "varName2": "cloverkingdomteam",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "11"
+      },
+      "name": "Check If Member has Role"
+    },
+    {
+      "title": "Clover Kingdom Poll",
+      "author": "${tempVars(\"user\")}",
+      "color": "RANDOM",
+      "timestamp": "true",
+      "url": "https://cloverkingdom.org",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://s3.amazonaws.com/files.enjin.com/1813800/site_logo/ckingdom_logo.png",
+      "storage": "1",
+      "varName": "embedpoll",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embedpoll",
+      "message": "**__${slashParams(\"Question\")}__**\n",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embedpoll",
+      "message": "🙋‍♂️Yes 🤷‍♂️ Unsure 🙅‍♂️No",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embedpoll",
+      "channel": "102",
+      "varName2": "poll",
+      "storage3": "1",
+      "varName3": "msg",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "4",
+      "varName2": "🙋‍♂️",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "4",
+      "varName2": "🤷‍♂️",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "4",
+      "varName2": "🙅‍♂️",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "source": "RDyOJ",
+      "type": "false",
+      "name": "Call Command/Event"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "Question",
+      "description": "Poll Message",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "Create a poll in this server"
+}
