@@ -1,0 +1,13 @@
+A simple command which gives you the following Informations about the current Server.
+
+- server icon
+- server name
+- server id
+- server verification level
+- server system channel
+- server online members count
+- server emojis list
+- server boost count
+- server emojis count
+- server boost tier
+- server channels count
