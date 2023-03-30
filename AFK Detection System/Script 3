@@ -1,0 +1,106 @@
+{
+  "name": "afk notify",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "peTNv",
+  "actions": [
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "member_id",
+      "name": "Store Member Info"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "has",
+      "dbpath": "afk.${tempVars(\"member_id\")}",
+      "dbvalue": "",
+      "storage": "1",
+      "varName": "checkif_mentioned_user_afk",
+      "name": "Local Database"
+    },
+    {
+      "storage": "1",
+      "varName": "checkif_mentioned_user_afk",
+      "comparison": "2",
+      "value": "true",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "1"
+      },
+      "name": "Check Variable"
+    },
+    {
+      "dbformat": "quick.db",
+      "dboperation": "get",
+      "dbpath": "afk.${tempVars(\"member_id\")}",
+      "dbvalue": "",
+      "storage": "1",
+      "varName": "fetch_reason_afk",
+      "name": "Local Database"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "member_name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "member_username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "member_avatarurl",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "#f5aaaa",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "📫〡${tempVars(\"member_name\")} is currently AFK.\n***${tempVars(\"fetch_reason_afk\")}***",
+          "fields": [],
+          "author": "${tempVars(\"member_username\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"member_avatarurl\")}",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "3"
+}
