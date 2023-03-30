@@ -1,0 +1,5 @@
+This is a Script that lets you use an custom Rolemenu with the follwoing Features:
+
+- a button to give all role in the select menu (edit the id)
+- a button to remove all yourself roles (edit the id)
+- a select menu to choose role
