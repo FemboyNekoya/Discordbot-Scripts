@@ -3,6 +3,11 @@ About the Script
 ```
 Basic AFK Detection system for Discord Servers of any Size.
 
+
+```
+You will need all 3 Scripts in order to make it Work.
+```
+
 Features
 - Set afk with reason
 - Automatically remove afk
