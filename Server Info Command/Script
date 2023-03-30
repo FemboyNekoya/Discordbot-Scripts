@@ -1,0 +1,230 @@
+{
+  "name": "serverinfo",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "ojary",
+  "actions": [
+    {
+      "ephemeral": true,
+      "name": "Start Thinking"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "IconUrl",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "Name",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "6",
+      "storage": "1",
+      "varName2": "verificationlevel",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "9",
+      "storage": "1",
+      "varName2": "Systemchannel",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "27",
+      "storage": "1",
+      "varName2": "onlinemember",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "emojilist",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "24",
+      "storage": "1",
+      "varName2": "emojicount",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "44",
+      "storage": "1",
+      "varName2": "boostcount",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "45",
+      "storage": "1",
+      "varName2": "levelboost",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "23",
+      "storage": "1",
+      "varName2": "channelcount",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "17",
+      "storage": "1",
+      "varName2": "membercount",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "46",
+      "storage": "1",
+      "varName2": "bannerurl",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "37",
+      "storage": "1",
+      "varName2": "roleamount",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "14",
+      "storage": "1",
+      "varName2": "rolelist",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "49",
+      "storage": "1",
+      "varName2": "vanityurl",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "18",
+      "storage": "1",
+      "varName2": "Created",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "user",
+      "info": "24",
+      "storage": "1",
+      "varName2": "JoinedAt",
+      "name": "Store Member Info"
+    },
+    {
+      "date": "${tempVars(\"Created\")}",
+      "info": "2",
+      "storage": "1",
+      "varName": "ts",
+      "name": "Store Date Info"
+    },
+    {
+      "text": "${tempVars(\"levelboost\")}",
+      "text2": "TIER_3",
+      "text3": "3",
+      "info": "1",
+      "storage": "1",
+      "varName": "boost",
+      "name": "Replace Text"
+    },
+    {
+      "date": "${tempVars(\"JoinedAt\")}",
+      "info": "2",
+      "storage": "1",
+      "varName": "ts2",
+      "name": "Store Date Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "#db9e21",
+          "timestamp": "true",
+          "imageUrl": "${tempVars(\"bannerurl\")}",
+          "thumbUrl": "",
+          "description": "Server: `${tempVars(\"Name\")}`\n> ID: `${tempVars(\"id\")}`\n> Verification level: `${tempVars(\"verificationlevel\ ")}`\n> Boost counts: `${tempVars(\"boostcount\")}` boosts (level `${tempVars(\"boost\")}`)\n\n\n**Information **\n> Channel counts: `${tempVars(\"channelcount\")}` channels\n> Member counts: `${tempVars(\"membercount\")}` members (`${tempVars( \"onlinemember\")}` online)\n\n**Roles [${tempVars(\"roleamount\")}]:**\n${tempVars(\"rolelist\")}\n\ n**Emojis [${tempVars(\"emojiamount\")}]:**\n${tempVars(\"emojilist\")} \n\n",
+          "fields": [
+            {
+              "name": "Created on",
+              "value": "<t:${tempVars(\"ts\")}:R>\n\n",
+              "inline": "true"
+            },
+            {
+              "name": "You joined the server on",
+              "value": "<t:${tempVars(\"ts2\")}:R>",
+              "inline": "true"
+            }
+          ],
+          "author": "${tempVars(\"Name\")}",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"IconUrl\")}",
+          "footerText": "${tempVars(\"vanityurl\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "nointeraction": false,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "EmbedMessage",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "4",
+  "parameters": [],
+ "description": "Get server information"
+}
