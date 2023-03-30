@@ -1,14 +1,15 @@
-```
-About the Script
-```
-Basic AFK Detection system for Discord Servers of any Size.
+<details>
 
+<summary>Important Information</summary>
 
-```
-You will need all 3 Scripts in order to make it Work.
+### AFK Detection System
+
+You can add text within a collapsed section. 
+
+You can add an image or a code block, too.
+
+```ruby
+   puts "Hello World"
 ```
 
-Features
-- Set afk with reason
-- Automatically remove afk
-- Send a message to user if target is afk along with reason
+</details>
