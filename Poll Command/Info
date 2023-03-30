@@ -1,1 +1,3 @@
 A Command which allowes you to make Polls directly in Discord.
+
+Uses Call Command/Event for denied (lack of role)
