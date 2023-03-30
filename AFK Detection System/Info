@@ -1,15 +1,8 @@
-<details>
+This System allowes you to:
 
-<summary>Important Information</summary>
+- Set afk with reason
+- Automatically remove afk
+- Send a message to user if target is afk along with reason
 
-### AFK Detection System
-
-You can add text within a collapsed section. 
-
-You can add an image or a code block, too.
-
-```ruby
-   puts "Hello World"
-```
-
-</details>
+                 (IMPORTANT)
+You need all 3 Scripts Provided to make it work.
